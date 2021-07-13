@@ -7,16 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  // tslint:disable-next-line: no-inferrable-types
   nombre: string = 'jonny';
+  // tslint:disable-next-line: no-inferrable-types
   valor: number = 1000;
   obj = {
     nombre: 'Jonny'
-  }
+  };
 
-  mostrarNombre(){
+  mostrarNombre(): void{
     console.log(this.nombre);
-    console.log(this.valor)
-    console.log(this.obj)
+    console.log(this.valor);
+    console.log(this.obj);
   }
 
 }
