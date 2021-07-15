@@ -1,7 +1,17 @@
-<h1>{{nombre | titlecase}}</h1> <!--los pipes nunca modifican la data que reciben como argumento-->
-<h1>{{valor | number}}</h1> <!-- los pipes trasnforman la data de manera visual-->
-<h1>{{obj | json}}</h1>
+<div class="text-layout">
+  <h1>{{nombre | titlecase}}</h1> <!--los pipes nunca modifican la data que reciben como argumento-->
+  <h1>{{valor | number}}</h1> <!-- los pipes trasnforman la data de manera visual-->
+  <h1>{{obj | json}}</h1>
+</div>
 
-<button (click)="mostrarNombre()">
-  Cambiar nombre
-</button>
+<button pButton (click)="mostrarNombre()" label="Cambiar nombre"
+icon="pi pi-thumbs-up" iconPos="right"></button>
+
+<br/>
+
+<!-- con parentesis cuadrados se define que la propiedd estará enlazada a una variable de Angular -->
+<p-card [header]="nombre | titlecase"
+        subheader="Esto es un subheader">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+</p-card>

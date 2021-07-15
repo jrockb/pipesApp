@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+html, body{
+  margin: 10px; /* para tener una separación en los bordes de 10 px */
+  background-color: var(--surface-b);
+  font-family:  var(--font-family); /* para obtener la variable definida en el tema */
+}
+
+.text-layout{
+  color: var(--text-color);
+}
