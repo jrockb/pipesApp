@@ -5,14 +5,23 @@
   </p>
 </div>
 
-<div class="p-grid" style="color: white;"> <!--columnas primeflex-->
+<div class="p-grid"> <!--columnas primeflex-->
   <div class="p-col-4" >
-    1
+    <p-card header="uppercase"
+            [subheader]="nombreLower"> <!--se pueden usar pipes en las propiedades siempre y cuando esten []-->
+      {{nombreLower | uppercase}}
+    </p-card>
   </div>
   <div class="p-col-4">
-    2
+    <p-card header="lowercase"
+            [subheader]="nombreLower">
+      {{nombreLower | lowercase}}
+    </p-card>
   </div>
   <div class="p-col-4">
-    3
+    <p-card header="titlecase"
+            [subheader]="nombreCompleto">
+      {{nombreCompleto | titlecase}}
+    </p-card>
   </div>
 </div>
