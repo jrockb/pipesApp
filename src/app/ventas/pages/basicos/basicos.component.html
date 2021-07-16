@@ -43,6 +43,15 @@
         <li>fecha | date:'long'</li>
         <li>fecha | date:'EEEE dd, MM, YYYY' (personalizado)</li>
       </ul>
+
+      <hr>
+      <ul>
+        <li>fecha | date:'long':'GMT-6'</li>
+        <li>fecha | date:'long':'GMT-4'</li>
+        <li>fecha | date:'long':'':'en'</li>
+        <li>fecha | date:'long':'':'fr'</li>
+      </ul>
+
     </p-card>
   </div>
 
@@ -55,6 +64,15 @@
         <li>{{fecha | date:'long'}}</li>
         <li>{{fecha | date:'EEEE dd, MM, YYYY'}}</li>
       </ul>
+
+      <hr>
+      <ul>
+        <li>{{fecha | date:'long':'GMT-6'}}</li>
+        <li>{{fecha | date:'long':'GMT-4'}}</li>
+        <li>{{fecha | date:'long':'':'en'}}</li> <!--por defecto se puede definir el local inglés, para otros idiomas hay que realizar una configuración en el modulo-->
+        <li>{{fecha | date:'long':'':'fr'}}</li>
+      </ul>
+
     </p-card>
   </div>
 </div>

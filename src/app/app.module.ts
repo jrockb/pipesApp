@@ -8,8 +8,10 @@ import { VentasModule } from './ventas/ventas.module';
 
 // cambiar el locale de la app de manera global
 import localEsCo from '@angular/common/locales/es-CO'; // el nombre del import es arbitrario
-import { registerLocaleData } from '@angular/common' // importar la función
+import localFr from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common'; // importar la función
 registerLocaleData(localEsCo);
+registerLocaleData(localFr);
 
 @NgModule({
   declarations: [
