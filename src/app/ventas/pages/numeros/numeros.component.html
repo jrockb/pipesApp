@@ -43,5 +43,17 @@
     </p-card>
   </div>
 
+  <!--pipe porcentaje-->
+  <div class="p-col-4">
+    <p-card header="Ganancia porcentual"
+            subheader="del presente año">
+      {{porcentaje | percent}}
+      <p>
+        Con dos digitos y dos decimales:
+        {{porcentaje | percent:'2.2-2'}}
+      </p>
+    </p-card>
+  </div>
+
 </div>
 
