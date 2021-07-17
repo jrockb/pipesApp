@@ -11,15 +11,19 @@
       <p>Saludos {{nombre}}, es un placer
       {{genero | i18nSelect:invitacionMap}}
        un evento.</p>
-       <p-button label="Cambiar nombre" (click)="cambiarNombre()">
-       </p-button>
+       <button pButton label="Cambiar nombre"
+               (click)="cambiarNombre()"
+               class="p-button-help">
+       </button>
     </p-fieldset>
   </div> <!--cuando la pantalla es grande se tienen dos columnas, cuando se reduce la pantalla se usan casi todas las columnas-->
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
       <p>Actualmente {{clientes.length | i18nPlural:clientesMap}}</p>
-      <p-button label="Borrar cliente" (click)="borrarCliente()">
-      </p-button>
+      <p-button label="Borrar cliente"
+                (onClick)="borrarCliente()"
+                class="p-button-danger">
+      </p-button> <!--el evento es onClick porque el boton es de la implementación de primeNg -->
     </p-fieldset>
   </div>
 </div>
