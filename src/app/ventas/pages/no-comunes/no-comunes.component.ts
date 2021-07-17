@@ -41,4 +41,11 @@ export class NoComunesComponent {
     }
   }
 
+  // keyValue pipe
+  persona = {
+    nombre: 'Jonny',
+    edad: 33,
+    direccion: 'Bogota, Colombia'
+  };
+
 }

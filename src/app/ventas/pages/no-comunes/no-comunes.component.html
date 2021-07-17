@@ -41,7 +41,17 @@
       <b>slice:3:3</b>
       <pre>{{clientes | slice:1:4}}</pre>
       <b>slice:0:4 (String)</b>
-      <pre>{{'Fernando' | slice:1:4}}</pre>
+      <pre>{{'Fernando' | slice:0:4}}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"><!--Imprimir un objeto y sus propiedades-->
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          <b>{{item.key | titlecase}}</b> : {{item.value}}
+        </li>
+      </ul>
     </p-fieldset>
   </div>
 
