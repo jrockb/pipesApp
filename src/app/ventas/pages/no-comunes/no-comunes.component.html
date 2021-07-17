@@ -1,1 +1,19 @@
-<p>no-comunes works!</p>
+<div class="text-layout"> <!--clase css definida en el app.component.css, no es de flexbox-->
+  <h1>Pipes no tan comunes</h1>
+  <p>
+    Pipes incluidos en Angular - Usualmente en el Common Module
+  </p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col p-md-6 p-sm-9"> <!--p-md-6: 6 columnas para pantallas medianas, p-sm-9: 9 columnas para pantallas pequeñas-->
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      Content
+    </p-fieldset>
+  </div> <!--cuando la pantalla es grande se tienen dos columnas, cuando se reduce la pantalla se usan casi todas las columnas-->
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      Content
+    </p-fieldset>
+  </div>
+</div>

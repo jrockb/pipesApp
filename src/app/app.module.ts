@@ -1,5 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -19,6 +20,7 @@ registerLocaleData(localFr);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, // modulo para agregar animaciones a varios componentes de primeNg
     AppRouterModule,
     SharedModule, // shared module importa prime-ng.module ya que ahí lo usa
     VentasModule
