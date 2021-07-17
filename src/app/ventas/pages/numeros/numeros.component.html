@@ -9,10 +9,8 @@
   <div class="p-col-4">
     <p-card header="Ventas Netas"
             subheader="del presente año">
-      <p>
         <i class="pi pi-dollar"></i> <!--icono de dolar propio de primeNg-->
           {{ventas | number:'1.2-2'}}<!--1:toda la parte entera, 2-2: dos decimales-->
-      </p>
       <p>
         De dos a cuatro decimales:
         <i class="pi pi-dollar"></i>
@@ -22,7 +20,7 @@
       <p>
         Cuatro decimales:
         <i class="pi pi-dollar"></i>
-          {{ventas | number:'1.2-4'}}<!--1:toda la parte entera, 2-2: de 2 a 4 decimales-->
+          {{ventas | number:'1.2-4'}}<!--1:toda la parte entera, 2-4: de 2 a 4 decimales-->
           <!--{{ventas | number:'1.4-4'}}: 4 decimales-->
       </p>
       <p>
@@ -32,5 +30,18 @@
       </p>
     </p-card>
   </div>
+  <!--Currency es el pipe para monedas-->
+  <div class="p-col-4">
+    <p-card header="Ventas Brutas"
+            subheader="del presente año">
+          {{ventas + 2000000 | currency:'COP'}}<!--por defecto currency muestra US$-->
+          <!--{{ventas + 2000000 | currency:'COP':'symbol-narrow'}}: muestra unicamente el simbolo-->
+          <p>
+            Con cuatro decimales:
+              {{ventas + 2000000 | currency:'COP':'symbol-narrow':'1.4-4'}}<!--1:toda la parte entera, 2-2: de 2 a 4 decimales-->
+          </p>
+    </p-card>
+  </div>
+
 </div>
 
