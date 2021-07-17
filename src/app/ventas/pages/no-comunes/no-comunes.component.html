@@ -46,6 +46,12 @@
   </div>
 
   <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset legend="Json Pipe" [toggleable]="true"><!--Imprimir un objeto como JSON-->
+      <pre>{{heroes | json}}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
     <p-fieldset legend="KeyValue Pipe" [toggleable]="true"><!--Imprimir un objeto y sus propiedades-->
       <ul>
         <li *ngFor="let item of persona | keyvalue">
@@ -53,6 +59,14 @@
         </li>
       </ul>
     </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset legend="Async Pipe" [toggleable]="true"><!--Imprimir un objeto y sus propiedades-->
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre> <!--Se muestra este mensaje hasta que no se resuelva la promesa-->
+      <pre>{{valorPromesa | async}}</pre>
+      <pre>{{miObservable | async}}</pre> <!--Async pipe imprime un objeto asincrono, requiere un observable o una promesa-->
+    </p-fieldset><!--el async pipe se suscribe internamente al observable-->
   </div>
 
 </div>
