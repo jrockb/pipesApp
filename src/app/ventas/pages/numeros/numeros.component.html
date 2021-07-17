@@ -1,1 +1,36 @@
-<p>numeros works!</p>
+<div class="text-layout"> <!--clase css definida en el app.component.css, no es de flexbox-->
+  <h1>DecimalPipe y porcentaje</h1>
+  <p>
+    Pipes incluidos en Angular - Usualmente en el Common Module
+  </p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="Ventas Netas"
+            subheader="del presente año">
+      <p>
+        <i class="pi pi-dollar"></i> <!--icono de dolar propio de primeNg-->
+          {{ventas | number:'1.2-2'}}<!--1:toda la parte entera, 2-2: dos decimales-->
+      </p>
+      <p>
+        De dos a cuatro decimales:
+        <i class="pi pi-dollar"></i>
+          {{ventas | number:'1.2-4'}}<!--1:toda la parte entera, 2-2: de 2 a 4 decimales-->
+          <!--{{ventas | number:'1.4-4'}}: 4 decimales-->
+      </p>
+      <p>
+        Cuatro decimales:
+        <i class="pi pi-dollar"></i>
+          {{ventas | number:'1.2-4'}}<!--1:toda la parte entera, 2-2: de 2 a 4 decimales-->
+          <!--{{ventas | number:'1.4-4'}}: 4 decimales-->
+      </p>
+      <p>
+        En base al resultado:
+        <i class="pi pi-dollar"></i>
+          {{ventas + 1000000 | number:'1.2-2'}}<!--1:toda la parte entera, 2-2: de 2 a 4 decimales-->
+      </p>
+    </p-card>
+  </div>
+</div>
+
