@@ -13,7 +13,7 @@
   </div> <!--cuando la pantalla es grande se tienen dos columnas, cuando se reduce la pantalla se usan casi todas las columnas-->
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-      Content
+      Actualmente {{clientes.length | i18nPlural:clientesMap}}
     </p-fieldset>
   </div>
 </div>
