@@ -1,4 +1,11 @@
 <div class="text-layout">
   <h1>Pipes personalizados</h1>
-  <p>Pipes realizados por {{'nosotros' | mayusculas}} </p>
+  <p>Pipes realizados por {{'nosotros' | mayusculas:enMayusculas}} </p><!--el parametro false se toma como booleano-->
+
+  <button pButton
+          label="Toggle mayúsculas"
+          (click) = "cambiarMayusculas()">
+  </button>
+
+
 </div>
