@@ -13,7 +13,7 @@ export class OrdenarComponent {
   cambiarMayusculas(): boolean{
     // otra forma: this.enMayusuculas= !this.enMayusuculas;
     this.enMayusculas = (this.enMayusculas === true) ? false : true ;
-    console.log('enMayusculas: ', this.enMayusculas);
+    //console.log('enMayusculas: ', this.enMayusculas);
     return this.enMayusculas;
   }
 
